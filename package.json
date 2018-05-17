@@ -22,6 +22,7 @@
   "homepage": "https://github.com/kenvilar/monster-slayer#readme",
   "dependencies": {
     "bootstrap": "^4.1.1",
+    "jquery": "^3.3.1",
     "vue": "^2.5.16"
   }
 }

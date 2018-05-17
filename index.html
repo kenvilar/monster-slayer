@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Monster Slayer</title>
+
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/custom.css">
+</head>
+<body>
+
+<div id="app">
+    <section class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h1 class="text-center">YOU</h1>
+                <div class="healthbar">
+                    <div
+                            class="healthbar healthbar-container text-center"
+                            :style="{width: playerHealth + '%'}">
+                        {{ playerHealth }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h1 class="text-center">MONSTER</h1>
+                <div class="healthbar">
+                    <div
+                            class="healthbar healthbar-container text-center"
+                            :style="{width: monsterHealth + '%'}">
+                        {{ monsterHealth }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="row controls" v-if="!gameIsRunning">
+        <div class="col-md-12">
+            <button type="button" id="start-game" class="btn btn-primary" @click="startTheGame">START NEW GAME</button>
+        </div>
+    </section>
+    <section class="row controls" v-else>
+        <div class="col-md-12">
+            <button type="button" id="attack" class="btn btn-outline-primary" @click="attack">ATTACK</button>
+            <button type="button" id="special-attack" class="btn btn-outline-info" @click="specialAttack">SPECIAL ATTACK
+            </button>
+            <button type="button" id="heal" class="btn btn-outline-success" @click="heal">HEAL</button>
+            <button type="button" id="give-up" class="btn btn-outline-danger" @click="giveUp">GIVE UP</button>
+        </div>
+    </section>
+    <section class="row log">
+        <div class="col-md-12">
+            <ul>
+                <li></li>
+            </ul>
+        </div>
+    </section>
+</div>
+
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="./node_modules/vue/dist/vue.min.js"></script>
+<script src="assets/js/index.js"></script>
+
+</body>
+</html>
