@@ -51,10 +51,10 @@
             <button type="button" id="give-up" class="btn btn-outline-danger" @click="giveUp">GIVE UP</button>
         </div>
     </section>
-    <section class="row log">
+    <section class="row log" v-if="turns.length > 0">
         <div class="col-md-12">
             <ul>
-                <li></li>
+                <li v-for="turn in turns">{{ turn.text }}</li>
             </ul>
         </div>
     </section>
