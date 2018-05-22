@@ -38,3 +38,11 @@
     font-weight: bold;
     text-transform: uppercase;
 }
+
+.player-turn {
+    background-color: lightskyblue;
+}
+
+.monster-turn {
+    background-color: palevioletred;
+}
